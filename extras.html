@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="stylemobile2.css" media="screen and (max-width:750px)">
+		<link rel="stylesheet" href="styleweb.css" media="screen and (min-width:750px)">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+		<title>BBC Sherlock | KC Liwanag</title>
+		
+		
+	</head>
+	
+	<body>
+    <div class="extrasgrid">
+        <div class="nav" id="myTopnav">
+          <a href="index.html">
+            <img src="images/221B.png">
+          </a>
+          <a href="about.html">
+            <h2>About</h2>
+          </a>
+          <a href="characters.html">
+            <h2>Characters</h2>
+          </a>
+          <a href="extras.html">
+            <h2>Extras</h2>
+          </a>
+          <a href="javascript:void(0);"
+          class="icon" onclick=
+          "myFunction()">&#9776;
+          </a>
+        </div>
+        <div class="title">
+          <h1>EXTRAS<h1>
+        </div>
+        <div class="arrow">
+            <img src="images/arrow2.png" style="height:35px;" onclick="slideInLightBox()">
+        </div>
+      </div>
+    <div id="light-box" class="light-box">
+			<h2 style="text-align:center;color:white;">Fan Artwork</h2>
+
+      <div class="row">
+        <div class="column art">
+          <img src="images/art1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column art">
+          <img src="images/art2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column art">
+          <img src="images/art3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+        <div class="column art">
+          <img src="images/art4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+		<div class="column art">
+          <img src="images/art5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+        </div>
+		<div class="column art">
+          <img src="images/art6.png" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+        </div>
+		<div class="column art">
+          <img src="images/art7.png" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+        </div>
+		<div class="column art">
+          <img src="images/art8.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+        </div>
+		<div class="column art">
+          <img src="images/art9.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+        </div>
+		<div class="column art">
+          <img src="images/art10.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+        </div>
+      </div>
+    </div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 10</div>
+      <img src="images/art1.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 10</div>
+      <img src="images/art2.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 10</div>
+      <img src="images/art3.jpg">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 10</div>
+      <img src="images/art4.jpg">
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">5 / 10</div>
+      <img src="images/art5.jpg">
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">6 / 10</div>
+      <img src="images/art6.png">
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">7 / 10</div>
+      <img src="images/art7.png">
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">8 / 10</div>
+      <img src="images/art8.jpg">
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">9 / 10</div>
+      <img src="images/art9.jpg">
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">10 / 10</div>
+      <img src="images/art10.jpg">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="column-container">
+      <div class="column">
+        <img class="demo cursor" src="images/art1.jpg" onclick="currentSlide(1)" >
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/art2.jpg" onclick="currentSlide(2)">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/art3.jpg" onclick="currentSlide(3)" >
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/art4.jpg" onclick="currentSlide(4)" >
+      </div>
+	  <div class="column">
+        <img class="demo cursor" src="images/art5.jpg" onclick="currentSlide(5)" >
+      </div>
+	  <div class="column">
+        <img class="demo cursor" src="images/art6.png" onclick="currentSlide(6)" >
+      </div>
+	  <div class="column">
+        <img class="demo cursor" src="images/art7.png" onclick="currentSlide(7)" >
+      </div>
+	  <div class="column">
+        <img class="demo cursor" src="images/art8.jpg" onclick="currentSlide(8)" >
+      </div>
+	  <div class="column">
+        <img class="demo cursor" src="images/art9.jpg" onclick="currentSlide(9)" >
+      </div>
+	  <div class="column">
+        <img class="demo cursor" src="images/art10.jpg" onclick="currentSlide(10)" >
+      </div>
+  </div>
+
+  </div>
+</div>
+
+	<script src="myscripts.js"></script>
+			
+	</body>
+	
+</html>
+		
+			
