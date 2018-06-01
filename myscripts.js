@@ -17,7 +17,6 @@ function closeModal() {
 }
 
 var slideIndex = 1;
-showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -43,6 +42,15 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+function slideInHome() {
+    document.getElementById('abouthome').scrollIntoView(
+      {
+        block: "start",
+        behavior: 'smooth'
+      }
+    );
 }
 
 function slideInLightBox() {
@@ -71,4 +79,21 @@ function slideInCharacter() {
       }
     );
 }
+
+
+var coll = document.getElementsByClassName("poi");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+
 

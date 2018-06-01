@@ -3,26 +3,41 @@ body,html {
     margin: 0;
 }
 
-.homecontainer {
+h1 {
+	font-size:5em;
+	font-family:'Noto Sans', sans-serif;
+	letter-spacing:0.5em;
+}
+
+h2 {
+	font-size:2em;
+	font-family:'Noto Sans', sans-serif;
+	letter-spacing:2px;
+}
+
+h3 {
+	font-size:0.9em;
+	font-family:'Noto Sans', sans-serif;
+	font-weight: lighter;
+}
+	
+.homegrid {
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		" nav nav nav"
+		" title title title"
+		" . button . "
+		"about character extras";
 	background-image:url("images/homebackground3.jpg");
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 	background-attachment: fixed;
-	height: 100%;
+	padding-bottom:5%;
 }
 
-.homegrid {
-	display:grid;
-	grid-template-columns:1fr 1fr 1fr;
-	grid-template-rows: auto auto auto auto auto;
-	grid-template-areas:
-		" nav nav nav"
-		" title title title"
-		". learnmore . "
-		" . button . ";
-	align-items:center;
-}
 .nav{
 	grid-area:nav;
 	display:flex;
@@ -30,7 +45,6 @@ body,html {
 	color:white;
 	margin:3em;
 }
-
 
 .nav a {
 	font-size:0.6em;
@@ -48,108 +62,132 @@ body,html {
 	display: none;
 }
 
-/*.logo {
-	width: 135px;
-	height: 120px;
-	background-image:url("images/221B.png");
-	background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.logo:hover {
-	background-image:url("images/221Bhover.png");
-}*/
-
-
-@media screen and (max-width: 750px) {
-	.nav a:not(:first-child)
-	{
-		display:none;
-	}
-	
-	.nav a.icon {
-		display: block;
-	}
-}
-
-@media screen and (max-width: 750px) {
-	.nav.responsive {
-		display: flex;
-		flex-flow: column nowrap;
-	}
-	
-	.nav.responsive .icon {
-		position: absolute;
-		right: 0;
-		top: 3%;
-	}
-	
-	.nav.responsive a{
-		display:block;
-	}
-}
-
-.nav img{
-	height:4em;
-}
-
-
-
 .title{
 	grid-area:title; 
-	display:flex;
 	color:white;
-	justify-content:center;
 	justify-self: center;
 	margin-top:20%;
 	opacity:0.8;
 }
 
-.learnmore{
-	grid-area:learnmore; 
-	display:flex;
-	border: 2px solid white;
+.arrow{
+	grid-area:button;
+	display: flex;
+	justify-content: center;
+	align-items: center ;
+	margin-bottom:10%;
+	opacity:0.4;
+}
+
+.arrow:hover{
+	opacity:1.0;
+}
+
+.abouthome, .characterhome, .extrashome{
+	margin:20% 3% 3% 3%;
+	background-color:black;
 	color:white;
-	justify-self: center;
-	justify-content:center;
-	width:250px;
-	opacity:0.5;
-	margin:8%;
-}
-
-.learnmore a{
-	text-decoration:none;
-	color:white;
-	font-family:'Noto Sans', sans-serif;
-}
-
-.learnmore a:hover{
-	opacity:1;
-}
-
-h1 {
-	font-size:5em;
-	font-family:'Noto Sans', sans-serif;
-	letter-spacing:0.5em;
-}
-
-h2 {
-	font-size:2em;
-	font-family:'Noto Sans', sans-serif;
-}
-
-h3 {
-	font-size:0.8em;
-	font-family:'Noto Sans', sans-serif;
-	font-weight: lighter;
-}
+	opacity:0.65;
+	padding:7%;
 	
+}
+
+.abouthome:hover{
+	opacity:1.0
+}
+
+
+.abouthome img{
+	width: 100%;
+    height: auto;
+}
+
+.abouthome a{
+	color:white;
+	text-decoration:none;
+	opacity:0.5;
+	float:right;
+	font-size:1em;
+	font-family:'Noto Sans', sans-serif;
+	letter-spacing:0.8em;
+}
+
+.abouthome > a:hover{
+	color:white;
+	text-decoration:none;
+	opacity:1.0;
+}
+
+.characterhome img{
+	width: 100%;
+    height: auto;
+}
+
+
+.characterhome a{
+	color:white;
+	text-decoration:none;
+	opacity:0.5;
+	float:right;
+	font-size:1em;
+	font-family:'Noto Sans', sans-serif;
+	letter-spacing:0.8em;
+}
+
+.characterhome > a:hover{
+	color:white;
+	text-decoration:none;
+	opacity:1.0;
+}
+
+.characterhome:hover{
+	opacity:1.0
+}
+
+
+.extrashome img{
+	width: 100%;
+    height: auto;
+}
+
+
+.extrashome  a{
+	color:white;
+	text-decoration:none;
+	opacity:0.5;
+	float:right;
+	font-size:1em;
+	font-family:'Noto Sans', sans-serif;
+	letter-spacing:0.8em;
+}
+
+.extrashome  > a:hover{
+	color:white;
+	text-decoration:none;
+	opacity:1.0;
+}
+
+.extrashome:hover{
+	opacity:1.0
+}
+
+.abouthome {
+	grid-area:about;
+}
+
+.characterhome{
+	grid-area:character;
+
+}
+
+.extrashome{
+	grid-area:extras;
+}
 
 .charactergrid {
 	display:grid;
 	grid-template-columns:1fr 1fr 1fr;
-	grid-template-rows: auto auto auto auto;
+	grid-template-rows: auto;
 	grid-template-areas:
 		" nav nav nav"
 		" title title title"
@@ -161,94 +199,66 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
 	background-attachment: fixed;
+	padding-bottom:10%;
 }
 
+.sherlock , .john, .moriarty, .hudson, .mycroft, .lestrade img {
+	width:auto;
+    height: auto;
+	
+}
+
+.sherlock , .john, .moriarty{
+	color:white;
+	padding:4em;
+	text-align:center;
+	margin-top:10em;
+}
+
+.hudson, .mycroft, .lestrade{
+	color:white;
+	padding:4em;
+	text-align:center;
+}
 
 .sherlock {
 	grid-area:sherlock;
-	color:white;
-	padding:4em;
-	margin-top:10em;
-	text-align:center;
-	
 }
 
-.sherlock img {
-	 max-width: 100%;
-    height: auto;
-	
-}
+/*.info1, .info2, .info3, .info4 , .info5, .info6{
+	height: auto;
+	max-width:100%;
+	background-color:black;
+	opacity:0.7;
+	text-align:center;
+	padding:5%;
+}*/
 
 .john {
 	grid-area:john;
-	color:white;
-	padding:4em;
-	text-align:center;
-	margin-top:10em;
-}
-
-.john img {
-
- max-width: 100%;
-    height: auto;
-	
 }
 
 .moriarty {
 	grid-area:moriarty;
-	color:white;
-	padding:4em;
-	text-align:center;
-	margin-top:10em;
 }
 
-.moriarty img {
-	 max-width: 100%;
-    height: auto;
-	
-}
 
 .hudson {
 	grid-area:hudson;
-	color:white;
-	padding:4em;
-	text-align:center;
 }
 
-.hudson img {
-	 max-width: 100%;
-    height: auto;
-	
-}
 
 .lestrade {
 	grid-area:lestrade;
-	color:white;
-	padding:4em;
-	text-align:center;
 	
 }
 
-.lestrade img {
-	 max-width: 100%;
-    height: auto;
-	
-}
 
 .mycroft {
 	grid-area:mycroft;
-	color:white;
-	padding:4em;
-	text-align:center;
-	
 }
 
-.mycroft img {
-	 max-width: 100%;
-    height: auto;
 	
-}
-		
 
 .aboutgrid {
 	display:grid;
@@ -258,22 +268,31 @@ h3 {
 		" nav nav nav "
 		" title title title "
 		" . button . "
-		" box box box ";
+		" box box box"
+		" list . . "
+		" collapsible . . "
+		" content . . "
+		" collapsible2 . . "
+		" content2 . . "
+		" collapsible3 . . "
+		" content3 . . "
+		" collapsible4 . . "
+		" content4 . . ";
 	background-image:url("images/aboutbackground2.jpg");
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 	background-attachment: fixed;
+	padding-bottom:5%;
 }
 
 
 .box {
 	grid-area:box;
 	background-color:black;
-	opacity: 0.5;
-	align-self:center;
-	margin:10%;
-	padding:5%;
+	opacity: 0.55;
+	margin:10% 10% 2% 10%;
+	padding:3%;
 	display:flex;
 	justify-content:space-between;
 	color:white;
@@ -290,6 +309,7 @@ h3 {
 .trailer {
 	text-align: center;
 	margin: auto;
+	float:right;
 }
 
 .trailer > iframe {
@@ -297,19 +317,145 @@ h3 {
 	max-height: 100%;
 }
 
-/*.extracontainer {
-	background-image:url("images/extrasbackground.jpg");
-	background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-	background-attachment: fixed;
-	height: 100%;
-}*/
+.list{
+	grid-area:list;
+	color:white;
+	justify-self:center;
+}
+
+.collapsible, .collapsible2, .collapsible3, .collapsible4 {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  width:75%;
+  justify-self:end;
+  font-family:'Noto Sans', sans-serif;
+}
+
+.collapsible {
+	grid-area:collapsible;
+}
+
+.collapsible2 {
+	grid-area:collapsible2;
+}
+
+.collapsible3 {
+	grid-area:collapsible3;
+}
+
+.collapsible4 {
+	grid-area:collapsible4;
+}
+
+.content, .content2 , .content3 , .content4 {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  width:75%;
+  justify-self:end;
+  font-family:'Noto Sans', sans-serif;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+
+  
+}
+
+.content {
+	grid-area:content;
+}
+
+.content2 {
+	grid-area:content2;
+}
+
+.content3 {
+	grid-area:content3;
+}
+
+.content4 {
+	grid-area:content4;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+.active2, .collapsible2:hover {
+  background-color: #ccc;
+}
+
+.active3, .collapsible3:hover {
+  background-color: #ccc;
+}
+
+.active4, .collapsible4:hover {
+  background-color: #ccc;
+}
+
+.collapsible:after {
+    content: '\02795'; 
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible2:after {
+    content: '\02795'; 
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible3:after {
+    content: '\02795'; 
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible4:after {
+    content: '\02795';
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+content: "\2796"; 
+}
+
+.active2:after {
+content: "\2796"; 
+}
+
+.active3:after {
+content: "\2796"; 
+}
+
+.active4:after {
+content: "\2796"; 
+}
 
 .extrasgrid {
 	display:grid;
 	grid-template-columns:1fr 1fr 1fr;
-	grid-template-rows: auto auto auto;
+	grid-template-rows: auto;
 	grid-template-areas:
 		" nav nav nav"
 		" title title title"
@@ -319,19 +465,6 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
 	background-attachment: fixed;
-	height: 100%;
-}
-
-.arrow{
-	grid-area:button;
-	display: flex;
-	justify-content: center;
-	align-items: center ;
-	margin-bottom:100px;
-	opacity:0.4;
-}
-.arrow:hover{
-	opacity:1.0;
 }
 
 * {
@@ -357,7 +490,6 @@ h3 {
   clear: both;
 }
 
-/* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
@@ -371,7 +503,7 @@ h3 {
   background-color: black;
 }
 
-/* Modal Content */
+
 .modal-content {
   position: relative;
   background-color: #fefefe;
@@ -381,7 +513,6 @@ h3 {
   max-width: 1200px;
 }
 
-/* The Close Button */
 .close {
   color: white;
   position: absolute;
@@ -391,8 +522,7 @@ h3 {
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover,.close:focus {
   color: #999;
   text-decoration: none;
   cursor: pointer;
@@ -406,9 +536,7 @@ h3 {
   cursor: pointer
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
+.prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -424,19 +552,15 @@ h3 {
   -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+.prev:hover,.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -460,8 +584,7 @@ img {
   opacity: 0.6;
 }
 
-.active,
-.demo:hover {
+.active,.demo:hover {
   opacity: 1;
 }
 
@@ -506,4 +629,32 @@ img.hover-shadow {
 
 .art {
 	height: 500px;
+}
+
+.down{
+	background-color:none;
+    animation-name: example;
+    animation-duration: 4s;
+
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color: white;}
+    25%  {background-color:black;}
+	50%   {background-color: white;}
+    100%  {background-color:black;}
+    
+}
+
+i {
+  border: solid white;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 30px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
