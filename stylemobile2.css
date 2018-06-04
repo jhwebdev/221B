@@ -72,7 +72,8 @@ h3 {
 	}
 	
 	.nav a.icon {
-		display: block;
+		display: inline-block;
+    	float: right;
 		font-size:1.5em;
 	}
 }
@@ -95,10 +96,6 @@ h3 {
 	}
 }
 
-.nav img{
-	height:3.2em;
-}
-
 .title{
 	grid-area:title; 
 	color:white;
@@ -117,7 +114,7 @@ h3 {
 	justify-content: center;
 	align-items: center ;
 	margin-bottom:230px;
-	opacity:0.4;
+	opacity:0.8;
 }
 
 .arrow:hover{
@@ -216,15 +213,10 @@ h3 {
 	grid-template-columns:1fr 1fr 1fr;
 	grid-template-rows: auto;
 	grid-template-areas:
-		" nav nav nav"
+		" nav nav nav "
 		" title title title"
 		" . button . "
-		" . sherlock . " 
-		" . john . "
-		" . moriarty . "
-		" . mycroft . "
-		" . hudson . "
-		" . lestrade . ";
+		" lightbox lightbox lightbox";
 	background-image:url("images/characterbackground3.jpg");
 	background-position: center;
     background-repeat: no-repeat;
@@ -232,7 +224,7 @@ h3 {
 	background-attachment: fixed;
 }
 
-.sherlock {
+/*.sherlock {
 	grid-area:sherlock;
 	color:white;
 	padding:2em;
@@ -321,7 +313,7 @@ h3 {
 
 .mycroft img {
 	 height:25em;
-}
+}*/
 
 
 .aboutgrid {
@@ -334,14 +326,16 @@ h3 {
 		" . button . "
 		" box box box"
 		" . list . "
-		" collapsible collapsible collapsible "
+		" wrapper wrapper wrapper"
+		". quiz . "
+		/*" collapsible collapsible collapsible "
 		" content content content "
 		" collapsible2 collapsible2 collapsible2 "
 		" content2 content2 content2 "
 		" collapsible3 collapsible3 collapsible3 "
 		" content3 content3 content3 "
 		" collapsible4 collapsible4 collapsible4 "
-		" content4 content4 content4 ";
+		" content4 content4 content4 "*/;
 	background-image:url("images/aboutbackground2.jpg");
 	background-position: center;
     background-repeat: no-repeat;
@@ -405,7 +399,7 @@ h3 {
   font-family:'Noto Sans', sans-serif;
 }
 
-.collapsible{
+/*.collapsible{
 	grid-area:collapsible;
 }
 
@@ -419,7 +413,7 @@ h3 {
 
 .collapsible4 {
 	grid-area:collapsible4;
-}
+}*/
 
 .content, .content2 , .content3 , .content4 {
   background-color: black;
@@ -439,7 +433,7 @@ h3 {
   
 }
 
-.content {
+/*.content {
 	grid-area:content;
 }
 
@@ -454,6 +448,11 @@ h3 {
 .content4 {
 	grid-area:content4;
 	margin-bottom:10%;
+}*/
+
+
+.wrapper {
+	grid-area:wrapper;
 }
 
 .active, .collapsible:hover {
@@ -524,7 +523,8 @@ h3 {
 	grid-template-areas:
 		" nav nav nav "
 		" title title title "
-		" . button . ";
+		" . button . "
+		" lightbox lightbox lightbox";
 	background-image:url("images/extrasbackground2.jpg");
 	background-position: center;
     background-repeat: no-repeat;
@@ -538,10 +538,13 @@ h3 {
 
 
 .light-box {
-	background-color: black;
+	background-color: none;
 	margin: -30px;
 	padding-top:30px;
 	text-align: center;
+	padding-bottom: 50px;
+	grid-area:lightbox;
+	margin-top:10%;
 }
 
 .row > .column {
@@ -639,8 +642,13 @@ img {
 .caption-container {
   text-align: center;
   background-color: black;
-  padding: 2px 16px;
+  padding: 30px 0px;
   color: white;
+  font-family:'Noto Sans', sans-serif;
+  font-size:0.9em;
+
+}
+
 }
 
 .demo {
@@ -656,7 +664,7 @@ img.hover-shadow {
 }
 
 .hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19)
 }
 
 .mySlides > img {
@@ -694,4 +702,50 @@ img.hover-shadow {
 	height: 500px;
 }
 
+@keyframes down {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.50;
+  }
+  75% {
+    opacity: 0.25;
+  }
+}
+
+@-webkit-keyframes down {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.50;
+  }
+  75% {
+    opacity: 0.25;
+  }
+}
+
+.down {
+  animation: down 2.8s ease 0s 10;
+  -webkit-animation: down 2.8s ease 0s 10;
+}
+
+i {
+  border: solid white;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 30px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
 	

@@ -76,7 +76,7 @@ h3 {
 	justify-content: center;
 	align-items: center ;
 	margin-bottom:10%;
-	opacity:0.4;
+	opacity:0.8;
 }
 
 .arrow:hover{
@@ -192,8 +192,7 @@ h3 {
 		" nav nav nav"
 		" title title title"
 		" . button . "
-		" sherlock john moriarty"
-		" mycroft hudson lestrade";
+		" lightbox lightbox lightbox";
 	background-image:url("images/characterbackground3.jpg");
 	background-position: center;
     background-repeat: no-repeat;
@@ -270,14 +269,15 @@ h3 {
 		" . button . "
 		" box box box"
 		" list . . "
-		" collapsible . . "
-		" content . . "
+		" wrapper. quiz"
+		/*" collapsible . . "
+		" content . .		"
 		" collapsible2 . . "
 		" content2 . . "
 		" collapsible3 . . "
-		" content3 . . "
+		" content3 . .		"
 		" collapsible4 . . "
-		" content4 . . ";
+		" content4 . . "*/;
 	background-image:url("images/aboutbackground2.jpg");
 	background-position: center;
     background-repeat: no-repeat;
@@ -323,6 +323,12 @@ h3 {
 	justify-self:center;
 }
 
+
+.wrapper {
+	grid-area:wrapper;
+	padding-left:20%;
+}
+
 .collapsible, .collapsible2, .collapsible3, .collapsible4 {
   background-color: black;
   color: white;
@@ -333,11 +339,10 @@ h3 {
   outline: none;
   font-size: 15px;
   width:75%;
-  justify-self:end;
   font-family:'Noto Sans', sans-serif;
 }
 
-.collapsible {
+/*.collapsible {
 	grid-area:collapsible;
 }
 
@@ -350,8 +355,8 @@ h3 {
 }
 
 .collapsible4 {
-	grid-area:collapsible4;
-}
+	grid-area:collapsible4;*/
+
 
 .content, .content2 , .content3 , .content4 {
   background-color: black;
@@ -372,7 +377,7 @@ h3 {
   
 }
 
-.content {
+/*.content {
 	grid-area:content;
 }
 
@@ -386,7 +391,7 @@ h3 {
 
 .content4 {
 	grid-area:content4;
-}
+}*/
 
 .active, .collapsible:hover {
   background-color: #ccc;
@@ -459,7 +464,8 @@ content: "\2796";
 	grid-template-areas:
 		" nav nav nav"
 		" title title title"
-		" button button button";
+		" button button button"
+		"lightbox lightbox lightbox";
 	background-image:url("images/extrasbackground2.jpg");
 	background-position: center;
     background-repeat: no-repeat;
@@ -472,11 +478,13 @@ content: "\2796";
 }
 
 .light-box {
-	background-color: black;
+	background-color: none;
 	margin: -30px;
 	padding-top:30px;
 	text-align: center;
 	padding-bottom: 50px;
+	grid-area:lightbox;
+	margin-top:10%;
 }
 
 .row > .column {
@@ -576,8 +584,10 @@ img {
 .caption-container {
   text-align: center;
   background-color: black;
-  padding: 2px 16px;
+  padding: 50px 100px;
   color: white;
+  font-family:'Noto Sans', sans-serif;
+  font-size:1.3em;
 }
 
 .demo {
@@ -631,25 +641,44 @@ img.hover-shadow {
 	height: 500px;
 }
 
-.down{
-	background-color:none;
-    animation-name: example;
-    animation-duration: 4s;
-
+@keyframes down {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.50;
+  }
+  75% {
+    opacity: 0.25;
+  }
 }
 
-/* Standard syntax */
-@keyframes example {
-    0%   {background-color: white;}
-    25%  {background-color:black;}
-	50%   {background-color: white;}
-    100%  {background-color:black;}
-    
+@-webkit-keyframes down {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.50;
+  }
+  75% {
+    opacity: 0.25;
+  }
+}
+
+.down {
+  animation: down 2.8s ease 0s 10;
+  -webkit-animation: down 2.8s ease 0s 10;
 }
 
 i {
   border: solid white;
-  border-width: 0 5px 5px 0;
+  border-width: 0 6px 6px 0;
   display: inline-block;
   padding: 30px;
 }
@@ -658,3 +687,4 @@ i {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
+

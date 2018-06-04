@@ -72,7 +72,7 @@ function slideInBox() {
 }
 
 function slideInCharacter() {
-    document.getElementById('sherlock').scrollIntoView(
+    document.getElementById('light-box').scrollIntoView(
       {
         block: "start",
         behavior: 'smooth'

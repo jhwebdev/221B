@@ -18,7 +18,7 @@
 					<h2>About</h2>
 				</a>
 				<a href="characters.html">
-					<h2>Characters</h2>
+					<h2>Characters <img src="images/skull2.png"></h2>
 				</a>
 				<a href="extras.html">
 					<h2>Extras</h2>
@@ -32,9 +32,90 @@
 				<h1>CHARACTERS<h1>
 			</div>
 			<div class="arrow">
-				<img src="images/arrow2.png" style="height:35px;" onclick="slideInCharacter()">
+				<i class="down" onclick="slideInCharacter()"></i>
 			</div>
-			<div Id="sherlock" class="sherlock">
+	<div id="light-box" class="light-box">
+		<div class="row">
+			<div class="column art">
+			  <img src="images/sherlockprofile2.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+			</div>
+			<div class="column art">
+			  <img src="images/johnprofile2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+			</div>
+			<div class="column art">
+			  <img src="images/moriartyprofile3.png" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+			</div>
+			<div class="column art">
+			  <img src="images/mycroftprofile2.png" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+			</div>
+			<div class="column art">
+			  <img src="images/hudsonprofile2.png" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+			</div>
+			<div class="column art">
+			  <img src="images/lestradeprofile2.png" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+			</div>
+		</div>
+    </div>
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 20</div>
+      <img src="images/sherlockprofile2.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 20</div>
+      <img src="images/johnprofile2.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 20</div>
+      <img src="images/moriartyprofile3.png">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 20</div>
+      <img src="images/mycroftprofile2.png">
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">5 / 20</div>
+      <img src="images/hudsonprofile2.png">
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">6 / 20</div>
+      <img src="images/lestradeprofile2.png">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="column-container">
+      <div class="column">
+        <img class="demo cursor" src="images/sherlockprofile2.jpg" onclick="currentSlide(1)" alt="He is the master of deduction, a consulting detective, the only one in the world as he invented the job. He's brilliant, a proper genius Should you ever meet him, he will no doubt read your family history in your mobile phone and your occupation in the way you hold yourself. Be warned though, he is not a man who has time for social graces, so you may find him more than just a little insulting at times, but you mustn't be offended if he calls you an idiot, he thinks practically everyone is!">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/johnprofile2.jpg" onclick="currentSlide(2)" alt="As a doctor, John, and he will tell you this himself if asked, is very good. Having returned home from serving as an Army Doctor in Afghanistan after being shot in the left shoulder, he now works as a GP at a local surgery. Should you wish to book an appointment with him, expect him to be running late as he is prone to falling asleep at his desk after he and Sherlock have had a late one on a case.">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/moriartyprofile3.png" onclick="currentSlide(3)" alt="James (Jim) Moriarty is the main antagonist of Series 1 and 2 of the BBC drama Sherlock, and later a posthumous antagonist in both the 2016 special The Abominable Bride and Series 4. He is a consulting criminal and the archenemy of Sherlock Holmes, and can be considered as the primary antagonist of the whole series.">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/mycroftprofile2.png" onclick="currentSlide(4)"alt="You do not contact Mycroft Holmes, he contacts you, and if he ever chooses to, rest assured he won't make some sort of threat as your situation will be quite clear to you. Mycroft worries about his younger brother Sherlock Holmes, constantly. He would prefer his concern go unmentioned however, as they have what you might call a difficult relationship. If you were to ask Sherlock about his older brother, he would probably tell you he is his archenemy, in his mind anyway." >
+      </div>
+	  <div class="column">
+        <img class="demo cursor" src="images/hudsonprofile2.png" onclick="currentSlide(5)" alt="Just to make things absolutely clear, Mrs. Hudson is in fact the landlady of 221 Baker Street, not the housekeeper! A widow after her husband got himself sentenced to death in Florida, Mrs. Hudson now rents out the other two flats in her building. Currently 221B is occupied by Sherlock Holmes, who was able to help her out by ensuring her husband got the death penalty, and Dr. John Watson.">
+      </div>
+	  <div class="column">
+        <img class="demo cursor" src="images/lestradeprofile2.png" onclick="currentSlide(6)" alt="Known for being just a little sarcastic, especially to those who he really shouldn't like Daily Mail reporters, Lestrade is the best that Scotland Yard has to offer. A Detective Inspector, he is at the top of his game, or rather he would be, were it not for a certain Consulting Detective he knows and often goes to when it's one of those funny cases he likes.">
+      </div>
+	 </div>
+  </div>
+			<!--<div Id="sherlock" class="sherlock">
 				<img src="images/sherlockprofile.jpg">
 				<div class="info1"><h2> Sherlock Holmes </h2>
 				<h3>He is the master of deduction, a consulting detective, the only one in the world as he invented the job. He's brilliant, a proper genius Should you ever meet him, he will no doubt read your family history in your mobile phone and your occupation in the way you hold yourself. Be warned though, he is not a man who has time for social graces, so you may find him more than just a little insulting at times, but you mustn't be offended if he calls you an idiot, he thinks practically everyone is!</h3>
@@ -68,9 +149,11 @@
 				<img src="images/lestradeprofile.png">
 				<div class="info6"><h2> Greg Lestrade </h2>
 				<h3>Known for being just a little sarcastic, especially to those who he really shouldn't like Daily Mail reporters, Lestrade is the best that Scotland Yard has to offer. A Detective Inspector, he is at the top of his game, or rather he would be, were it not for a certain Consulting Detective he knows and often goes to when it's one of those funny cases he likes.</h3>
-			</div>
-			</div>
-		</div>			
+			</div>-->
+				
+</div>	
+</div>	
+</div>
 		<script src="myscripts.js"></script>
 	</body>
 </html>
